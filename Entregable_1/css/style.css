@@ -1,7 +1,7 @@
 /* ============================================================
    Universidad de la Amazonia · Ingeniería de Sistemas
    Bootstrap aporta la retícula y las utilidades. Este archivo
-   define la identidad visual. No requiere compilación ni JS.
+   define la identidad visual. No requiere compilación. Bootstrap JS aporta el carousel.
    ============================================================ */
 
 /* 1. Paleta, tipografía y accesibilidad */
@@ -159,18 +159,19 @@ summary::-webkit-details-marker { display: none; }
 .mobile-navigation a:hover { background: var(--surface-alt); text-decoration: none; }
 
 /* Accesos rápidos: espacio reservado en desktop, labels al hover y al focus. */
-.quick-dock { position: fixed; left: 12px; top: 50%; transform: translateY(-50%); z-index: 70; padding: 6px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+.quick-dock { position: fixed; left: 12px; top: 50%; transform: translateY(-50%); z-index: 70; padding: 10px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 6px 28px rgb(0 0 0 / 6%); }
 .quick-dock ul, .mobile-access ul { padding: 0; list-style: none; }
-.quick-dock li + li { margin-top: 2px; }
-.quick-dock a { position: relative; display: grid; place-items: center; width: 44px; min-height: 44px; border-radius: 9px; color: var(--green); }
-.quick-dock svg, .mobile-access svg { width: 21px; height: 21px; flex-shrink: 0; }
+.quick-dock li + li { margin-top: 4px; }
+.quick-dock a { position: relative; display: grid; place-items: center; width: 56px; min-height: 56px; border-radius: 12px; color: var(--green); }
+.quick-dock svg { width: 27px; height: 27px; }
+.mobile-access svg { width: 23px; height: 23px; flex-shrink: 0; }
 .quick-dock a:hover, .quick-dock a:focus-visible { background: var(--surface-alt); text-decoration: none; }
-.quick-dock .dock-label { position: absolute; left: calc(100% + 10px); padding: .625rem .875rem; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); white-space: nowrap; font-size: .8125rem; opacity: 0; visibility: hidden; transform: translateX(-6px); transition: opacity .25s ease, transform .25s ease; pointer-events: none; }
+.quick-dock .dock-label { position: absolute; left: calc(100% + 10px); padding: .875rem 1.125rem; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); white-space: nowrap; font-size: .875rem; opacity: 0; visibility: hidden; transform: translateX(-6px); transition: opacity .25s ease, transform .25s ease; pointer-events: none; }
 .quick-dock a:is(:hover, :focus) .dock-label { opacity: 1; visibility: visible; transform: translateX(0); }
 .mobile-access { position: fixed; right: 1rem; bottom: 1rem; z-index: 70; }
-.mobile-access > summary { display: flex; align-items: center; justify-content: center; gap: .625rem; min-height: 48px; padding: .625rem 1rem; border: 1px solid var(--line); border-radius: 30px; background: var(--surface); color: var(--green); box-shadow: 0 4px 16px rgb(0 0 0 / 10%); font-size: .8125rem; font-weight: 500; }
+.mobile-access > summary { display: flex; align-items: center; justify-content: center; gap: .75rem; min-height: 56px; padding: .75rem 1.125rem; border: 1px solid var(--line); border-radius: 30px; background: var(--surface); color: var(--green); box-shadow: 0 4px 16px rgb(0 0 0 / 10%); font-size: .8125rem; font-weight: 500; }
 .mobile-access nav { position: absolute; bottom: calc(100% + .625rem); right: 0; width: min(310px, calc(100vw - 2rem)); max-height: 65vh; overflow-y: auto; padding: .625rem; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
-.mobile-access a { display: flex; align-items: center; gap: .75rem; min-height: 44px; padding: .5rem .75rem; border-radius: 8px; font-size: .8125rem; color: var(--ink); }
+.mobile-access a { display: flex; align-items: center; gap: .875rem; min-height: 48px; padding: .625rem .75rem; border-radius: 8px; font-size: .875rem; color: var(--ink); }
 .mobile-access a:hover { background: var(--surface-alt); color: var(--green); text-decoration: none; }
 
 /* 4. Hero: tipografía amplia, contornos amazónicos y circuitos sutiles */
@@ -263,9 +264,9 @@ summary::-webkit-details-marker { display: none; }
 .publication-meta { margin-top: 1.5rem; color: var(--muted); font-size: .625rem; }
 
 /* Animación del acordeón: énfasis sutil; details funciona también sin estas mejoras. */
-.academic-detail { position: relative; border: 1px solid transparent; border-bottom-color: var(--line); border-radius: 10px; transform-origin: center; transition: transform .3s ease, background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.academic-detail { position: relative; border: 1px solid transparent; border-bottom-color: var(--line); border-radius: 10px; transform-origin: center; transition: transform .35s ease, background-color .35s ease, border-color .35s ease, box-shadow .35s ease; }
 .academic-detail > summary { padding-inline: .5rem; }
-.academic-detail[open] { z-index: 1; transform: scale(1.01); background: var(--surface); border-color: color-mix(in srgb, var(--green) 25%, var(--line)); box-shadow: var(--shadow); }
+.academic-detail[open] { z-index: 1; transform: scale(1.02); background: color-mix(in srgb, var(--green) 4%, var(--surface)); border-color: color-mix(in srgb, var(--green) 42%, var(--line)); box-shadow: 0 8px 26px color-mix(in srgb, var(--green) 12%, transparent); }
 .academic-detail:not([open]):hover { background: var(--surface-alt); }
 .academic-detail[open] .accordion-body { padding-right: 1rem; }
 .detail-toggle::after { transition: transform .3s ease, opacity .3s ease; }
@@ -283,6 +284,26 @@ summary::-webkit-details-marker { display: none; }
 }
 @keyframes reveal-content { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 
+/* Plan de estudios: 10 semestres, créditos verificados en el Acuerdo 44. */
+.study-plan { padding-block: 3rem 4rem; border-top: 1px solid var(--line); scroll-margin-top: 1rem; }
+.study-plan-caption { margin-bottom: 1.5rem; color: var(--muted); font-size: .875rem; }
+.semester-card { display: flex; flex-direction: column; height: 100%; padding: 1.125rem; border: 1px solid var(--line); border-top: 3px solid var(--green); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+.semester-heading { display: flex; align-items: center; gap: .75rem; margin-bottom: 1rem; }
+.semester-number { display: grid; place-items: center; width: 46px; height: 46px; flex-shrink: 0; border-radius: 12px; background: color-mix(in srgb, var(--green) 8%, var(--surface)); color: var(--green); font-size: 1.125rem; font-weight: 700; }
+.semester-heading p { font-size: .625rem; color: var(--muted); letter-spacing: .04em; }
+.semester-heading h3 { margin-top: .25rem; font-size: 1rem; font-weight: 700; }
+.course-list { flex: 1; padding: 0; list-style: none; }
+.course-list li { display: flex; align-items: start; justify-content: space-between; gap: .5rem; padding-block: .625rem; border-bottom: 1px solid var(--line); font-size: .8125rem; line-height: 1.65; }
+.course-list li > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.course-list li:last-child { border-bottom: 0; }
+.course-credits { display: grid; place-items: center; min-width: 25px; min-height: 25px; flex-shrink: 0; padding: .125rem .25rem; border-radius: 7px; background: var(--surface-alt); color: var(--green); font-size: .6875rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.semester-total { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.semester-total > span { color: var(--muted); font-size: .6875rem; }
+.semester-total strong { padding: .375rem .625rem; border-radius: 20px; background: color-mix(in srgb, var(--green) 8%, var(--surface)); color: var(--green); font-size: .75rem; white-space: nowrap; }
+.study-plan-notes { margin-top: 1.5rem; padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-alt); }
+.study-plan-notes summary { display: flex; align-items: center; justify-content: space-between; gap: .75rem; min-height: 44px; color: var(--green); font-size: .8125rem; font-weight: 500; }
+.study-plan-notes p { margin-bottom: .75rem; color: var(--muted); font-size: .8125rem; }
+
 /* 8. Actualidad: noticias del original con ilustración decorativa del diseño actual. */
 .university-news { padding-block: 3rem 4rem; border-block: 1px solid var(--line); background: var(--surface-alt); }
 .news-card { height: 100%; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
@@ -297,13 +318,50 @@ summary::-webkit-details-marker { display: none; }
 .news-card p { margin-top: .75rem; font-size: .8125rem; color: var(--muted); }
 .news-card .text-link { margin-top: 1rem; font-size: .75rem; }
 
+/* Noticias: una card amplia por vista, controles manuales e indicadores de 44px. */
+.news-carousel .carousel-inner { display: grid; border-radius: 14px; }
+.news-carousel .carousel-inner::after { display: none; }
+.news-carousel .carousel-item { display: block; grid-area: 1 / 1; float: none; margin-right: 0; visibility: hidden; transition: transform .4s ease-in-out; }
+.news-carousel .carousel-item.active, .news-carousel .carousel-item-next, .news-carousel .carousel-item-prev { visibility: visible; }
+.news-carousel .news-card { display: grid; grid-template-columns: minmax(0, 1fr); }
+.news-carousel .news-art { justify-content: center; min-height: 200px; background: var(--hero-bg); color: #fff; }
+.news-carousel .news-art > span { max-width: 12ch; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -.04em; }
+.news-carousel .news-body { display: flex; flex-direction: column; justify-content: center; }
+.news-carousel .news-meta { margin-bottom: 1rem; }
+.news-carousel .news-card h3 { font-size: clamp(1.25rem, 2.2vw, 1.875rem); line-height: 1.35; }
+.news-carousel .news-card p { font-size: .875rem; line-height: 1.8; }
+.news-carousel .news-card .text-link { align-self: start; margin-top: 1.25rem; }
+.news-carousel-navigation { display: grid; grid-template-columns: 52px 52px minmax(0, 1fr); align-items: center; justify-items: start; gap: .5rem; margin-top: 1.25rem; }
+.news-carousel-control { display: grid; place-items: center; width: 52px; height: 52px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--green); transition: background-color .25s ease, border-color .25s ease; }
+.news-carousel-control:hover { border-color: var(--green); background: var(--surface-alt); }
+.news-carousel-control svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.75; }
+.news-carousel-control:first-child { grid-column: 1; grid-row: 2; justify-self: end; }
+.news-carousel-control:last-child { grid-column: 2; grid-row: 2; justify-self: start; }
+.news-carousel .carousel-indicators { position: static; grid-column: 1 / -1; grid-row: 1; justify-self: center; display: flex; align-items: center; gap: 0; margin: 0; }
+.news-carousel .carousel-indicators [data-bs-target] { display: grid; place-items: center; width: 44px; height: 44px; margin: 0; padding: 0; border: 0; background: transparent; opacity: 1; text-indent: 0; }
+.news-carousel .carousel-indicators button > span { width: 9px; height: 9px; border-radius: 20px; background: var(--muted); transition: width .3s ease, background-color .3s ease; }
+.news-carousel .carousel-indicators button.active > span { width: 25px; background: var(--green); }
+.news-carousel .carousel-indicators button:hover > span { background: var(--green); }
+@media (min-width: 576px) {
+  .news-carousel-navigation { display: flex; justify-content: center; gap: 1rem; }
+}
+@media (min-width: 768px) {
+  .news-carousel .news-card { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); min-height: 430px; }
+  .news-carousel .news-art { aspect-ratio: auto; padding: 2rem; }
+  .news-carousel .news-body { padding: 2rem; }
+  .study-plan { padding-block: 4rem; }
+}
+@media (min-width: 1200px) {
+  .news-carousel .news-body { padding: 3rem; }
+}
+
 /* 9. Tarjetas institucionales: cuatro categorías y grupos desplegables. */
 .institutional-links { padding-block: 3rem 4rem; }
 .links-grid { align-items: start; }
 .institutional-card { padding: 1.5rem; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
 .directory-card-mark { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; }
 .directory-card-mark svg { width: 42px; height: 42px; padding: 10px; border-radius: 10px; background: var(--surface-alt); color: var(--green); }
-.directory-card-mark > span { color: var(--muted); font-size: .75rem; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
+.directory-card-mark > span { display: grid; place-items: center; min-width: 50px; min-height: 44px; padding: .375rem .625rem; border: 1px solid color-mix(in srgb, var(--green) 20%, var(--line)); border-radius: 12px; background: color-mix(in srgb, var(--green) 8%, var(--surface)); color: var(--green); font-size: 1.125rem; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
 .institutional-card h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -.025em; }
 .directory-intro { margin-top: .625rem; min-height: 3rem; color: var(--muted); font-size: .75rem; line-height: 1.7; }
 .directory-group, .directory-subgroup { margin-top: 1.25rem; }
@@ -334,7 +392,9 @@ summary::-webkit-details-marker { display: none; }
 .site-footer a { color: #c6d6cc; }
 .site-footer a:hover { color: #eaf2ed; }
 .site-footer :focus-visible { outline-color: var(--accent); }
-.social-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: .6875rem; }
+.social-links a { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .5rem .75rem; border: 1px solid #2b4034; border-radius: 8px; font-size: .75rem; transition: background-color .25s ease, border-color .25s ease; }
+.social-links a:hover { border-color: #4c725c; background: #173d29; text-decoration: none; }
+.social-icon { width: 19px; height: 19px; flex-shrink: 0; }
 .footer-columns { padding-block: 2.5rem; }
 .footer-columns h3 { margin-bottom: 1rem; color: #f2f7f3; font-size: .875rem; font-weight: 700; }
 .footer-columns ul { padding: 0; list-style: none; }
@@ -368,7 +428,7 @@ summary::-webkit-details-marker { display: none; }
 
 @media (min-width: 992px) {
   .site-container { width: calc(100% - 4rem); }
-  body { padding-left: 80px; }
+  body { padding-left: 108px; }
   html { scroll-padding-top: 7rem; }
   .program-card { top: 7rem; }
   .university-brand img { width: 290px; }
@@ -393,7 +453,13 @@ summary::-webkit-details-marker { display: none; }
   .university-brand img { width: 170px; }
   .site-footer { padding-bottom: 4rem; }
 }
-@media (min-width: 992px) and (max-height: 540px) {
+/* En ventanas bajas se mantienen todos los accesos de 56px en dos columnas. */
+@media (min-width: 992px) and (max-height: 650px) {
+  .quick-dock ul { display: grid; grid-template-columns: repeat(2, 56px); gap: 4px; }
+  .quick-dock li + li { margin-top: 0; }
+  body { padding-left: 168px; }
+}
+@media (min-width: 992px) and (max-height: 360px) {
   .quick-dock { max-height: calc(100vh - 2rem); overflow-y: auto; }
 }
 @media (max-width: 374px) {
@@ -415,6 +481,8 @@ summary::-webkit-details-marker { display: none; }
   .academic-detail::details-content, .quick-dock .dock-label,
   .quick-dock a:is(:hover, :focus) .dock-label { transform: none; }
   .academic-detail::details-content { transition: none; }
+  .news-carousel .carousel-item, .news-carousel-control,
+  .news-carousel .carousel-indicators button > span, .social-links a { transition: none; }
 }
 
 @media print {
@@ -427,5 +495,6 @@ summary::-webkit-details-marker { display: none; }
   .program-card { position: static; box-shadow: none; }
   .academic-layout { padding-block: 2rem; }
   .academic-detail { break-inside: avoid; }
+  .semester-card { break-inside: avoid; box-shadow: none; }
   a { color: #075b2a; }
 }
