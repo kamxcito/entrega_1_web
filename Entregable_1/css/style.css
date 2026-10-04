@@ -1,0 +1,318 @@
+/* ============================================================
+   Universidad de la Amazonia · Ingeniería de Sistemas
+   Bootstrap aporta la retícula y las utilidades. Este archivo
+   define la identidad visual. No requiere compilación ni JS.
+   ============================================================ */
+
+/* 1. Paleta, tipografía y accesibilidad */
+:root {
+  color-scheme: light;
+  --page: #f7f9f7;
+  --surface: #ffffff;
+  --surface-alt: #f1f5f1;
+  --ink: #17201b;
+  --muted: #667069;
+  --line: #e4e9e5;
+  --green: #0d810d;
+  --forest: #075b2a;
+  --accent: #b7d52a;
+  --button-ink: #ffffff;
+  --shadow: 0 4px 24px rgb(23 32 27 / 4%);
+  --bs-body-font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  --bs-body-bg: var(--page);
+  --bs-body-color: var(--ink);
+  --bs-link-color: var(--green);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+html:has(#text-large:checked) { font-size: 112.5%; }
+body { margin: 0; font-family: var(--bs-body-font-family); background: var(--page); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, p, dl, dd { margin: 0; }
+h1, h2, h3, h4 { color: inherit; line-height: 1.25; }
+a { color: var(--green); text-decoration: none; text-underline-offset: 4px; }
+a:hover { color: var(--green); text-decoration: underline; }
+img { display: block; max-width: 100%; height: auto; }
+button, input { font: inherit; }
+button, summary, a { -webkit-tap-highlight-color: transparent; }
+button, summary { cursor: pointer; }
+svg { display: block; }
+ul, ol { margin: 0; }
+main, article, aside, section, .row > * { min-width: 0; }
+:where(a, button, input, summary):focus-visible { outline: 3px solid var(--green); outline-offset: 4px; border-radius: 4px; }
+main:focus { outline: none; }
+.site-container { width: calc(100% - 2rem); max-width: 1200px; margin-inline: auto; }
+.skip-link { position: fixed; top: 1rem; left: 1rem; z-index: 200; padding: .75rem 1.5rem; background: var(--surface); color: var(--green); border: 2px solid var(--green); border-radius: 8px; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+.eyebrow { color: var(--green); font-size: .6875rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+.section-heading { margin-bottom: 2rem; }
+.section-heading h2 { margin-top: .75rem; font-size: clamp(1.65rem, 3vw, 2.5rem); font-weight: 650; letter-spacing: -.045em; }
+.section-heading p:not(.eyebrow) { margin-top: .75rem; color: var(--muted); font-size: .9375rem; }
+.text-link { display: inline-flex; gap: .75rem; align-items: center; min-height: 44px; font-size: .8125rem; font-weight: 650; }
+
+/* 2. Encabezado compacto y controles HTML nativos */
+.site-header { position: relative; z-index: 60; background: var(--surface); }
+.institutional-bar { background: var(--forest); color: #fff; font-size: .6875rem; }
+.institutional-bar > .site-container { min-height: 36px; }
+.gov-link { display: inline-flex; align-items: center; gap: .75rem; color: #fff; font-size: .875rem; font-weight: 800; letter-spacing: -.03em; }
+.gov-link:hover { color: #fff; }
+.language-label { font-weight: 650; }
+.language-label span { margin-left: .5rem; font-weight: 400; }
+.identity-row { min-height: 76px; padding-block: .75rem; }
+.university-brand { display: block; flex-shrink: 0; max-width: 57%; }
+.university-brand img { width: 205px; height: auto; border-radius: 4px; }
+.header-tools { flex-shrink: 0; }
+.header-tools svg, .mobile-navigation svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.header-dropdown { position: relative; }
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+.header-dropdown > summary { display: flex; align-items: center; justify-content: center; gap: .625rem; min-height: 44px; font-size: .75rem; }
+.institutional-bar summary { min-height: 36px; }
+.header-tools .header-dropdown > summary { min-width: 44px; color: var(--ink); border-radius: 8px; }
+.header-tools .header-dropdown > summary:hover { background: var(--surface-alt); }
+.header-dropdown[open] > summary { font-weight: 650; }
+.dropdown-panel { position: absolute; top: calc(100% + .5rem); right: 0; z-index: 80; width: min(310px, calc(100vw - 2rem)); max-height: 70vh; overflow-y: auto; padding: 1.25rem; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); box-shadow: 0 8px 28px rgb(0 0 0 / 10%); }
+.dropdown-panel h2 { font-size: .9375rem; font-weight: 700; margin-bottom: .75rem; }
+.dropdown-panel ul { padding: 0; list-style: none; }
+.dropdown-panel a { display: flex; align-items: center; min-height: 44px; font-size: .8125rem; }
+.dropdown-panel p { color: var(--muted); font-size: .75rem; }
+.dropdown-panel fieldset { margin-bottom: .75rem; }
+.dropdown-panel legend { font-size: .8125rem; margin-bottom: .5rem; }
+.dropdown-panel label { display: flex; align-items: center; gap: .75rem; min-height: 44px; font-size: .8125rem; }
+.dropdown-panel input[type="radio"] { accent-color: var(--green); width: 18px; height: 18px; }
+.mobile-search .dropdown-panel { right: -56px; }
+.search-form { display: flex; align-items: center; width: 100%; min-height: 44px; border: 1px solid var(--line); border-radius: 8px; background: var(--page); }
+.search-form:focus-within { border-color: var(--green); }
+.search-form input[type="search"] { width: 100%; min-width: 0; padding: .625rem .875rem; border: 0; background: transparent; color: var(--ink); font-size: .8125rem; }
+.search-form input::placeholder { color: var(--muted); opacity: 1; }
+.search-form button { display: grid; place-items: center; flex-shrink: 0; width: 44px; min-height: 44px; padding: 0; background: transparent; border: 0; color: var(--muted); }
+.theme-indicator { align-items: center; gap: .5rem; color: var(--muted); font-size: .6875rem; white-space: nowrap; }
+.theme-indicator > span:first-child { font-size: 1.125rem; }
+.theme-dark { display: none; }
+
+/* 3. Navegación sticky. Menú móvil con details, sin Bootstrap JS */
+.primary-nav { position: sticky; top: 0; z-index: 50; border-block: 1px solid var(--line); background: var(--surface); }
+.desktop-navigation { padding: 0; list-style: none; }
+.desktop-navigation a { position: relative; display: flex; align-items: center; min-height: 52px; color: var(--muted); font-size: .8125rem; font-weight: 550; }
+.desktop-navigation a:hover { color: var(--ink); text-decoration: none; }
+.desktop-navigation .nav-active { color: var(--green); font-weight: 700; }
+.desktop-navigation .nav-active::after { content: ""; position: absolute; bottom: -1px; left: 0; right: 0; height: 3px; border-radius: 3px 3px 0 0; background: var(--green); }
+.mobile-navigation > summary { display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-size: .8125rem; font-weight: 600; }
+.mobile-navigation ul { padding: .5rem 0 1rem; list-style: none; }
+.mobile-navigation a { display: flex; align-items: center; min-height: 44px; padding-inline: .75rem; color: var(--ink); border-radius: 8px; font-size: .875rem; }
+.mobile-navigation a:hover, .mobile-navigation .nav-active { background: var(--surface-alt); color: var(--green); }
+
+/* 4. Hero: tipografía amplia, contornos amazónicos y circuitos sutiles */
+.hero { position: relative; overflow: hidden; background: linear-gradient(115deg, #064c2b 0%, #075b2a 55%, #0d710e 100%); color: #fff; }
+.hero .breadcrumb { margin-bottom: 0; padding-top: 1.25rem; }
+.breadcrumb ol { padding: 0; list-style: none; font-size: .6875rem; line-height: 1.8; color: #d0e4d3; }
+.breadcrumb a { display: inline-block; padding-block: .25rem; color: #d0e4d3; }
+.breadcrumb li:not(:last-child)::after { content: "/"; margin-left: .5rem; color: #b2ceb8; }
+.breadcrumb [aria-current="page"] { color: #fff; }
+.hero-layout { padding-block: 2.5rem 3rem; }
+.hero .eyebrow { display: flex; align-items: center; gap: .625rem; color: #d6e7ba; }
+.hero .eyebrow > span { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.hero h1 { max-width: 750px; margin-top: 1.25rem; font-size: clamp(2.75rem, 6vw, 5.25rem); font-weight: 650; line-height: 1.02; letter-spacing: -.06em; }
+.hero h1 > span { display: block; color: #d8ecb7; }
+.hero-description { max-width: 480px; margin-top: 1.5rem; font-size: clamp(.9375rem, 1.3vw, 1.0625rem); line-height: 1.8; color: #d6e7d9; }
+.program-badges { margin-top: 1.5rem; padding: 0; list-style: none; }
+.program-badges li { display: inline-flex; align-items: center; gap: .5rem; padding: .375rem .75rem; border: 1px solid rgb(255 255 255 / 25%); border-radius: 5px; font-size: .6875rem; color: #e9f3ea; }
+.program-badges li > span { font-size: .875rem; }
+.hero-actions { margin-top: 2rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; min-height: 48px; padding: .75rem 1.125rem; border: 1px solid transparent; border-radius: 8px; font-size: .8125rem; font-weight: 650; line-height: 1.5; transition: background-color .2s, border-color .2s, transform .2s; }
+.button:hover { text-decoration: none; transform: translateY(-1px); }
+.button-lime { background: var(--accent); color: #183614; }
+.button-lime:hover { background: #c7e24a; color: #183614; }
+.button-hero { border-color: rgb(255 255 255 / 35%); color: #fff; }
+.button-hero:hover { border-color: #fff; background: rgb(255 255 255 / 7%); color: #fff; }
+.hero :focus-visible { outline-color: var(--accent); }
+.hero-art { padding-left: 2rem; }
+.hero-art svg { width: 100%; max-width: 360px; }
+.hero-art .contours { stroke: #c5deb0; stroke-width: .75; opacity: .25; }
+.hero-art .circuit-lines { stroke: #b7d52a; stroke-width: 1; opacity: .55; }
+.hero-art p { margin-top: 1rem; text-align: center; font-size: .625rem; letter-spacing: .21em; color: #d6e7d9; }
+.hero-art p span { margin-inline: .5rem; color: var(--accent); }
+.hero-bottom { padding-block: 1rem; border-top: 1px solid rgb(255 255 255 / 17%); font-size: .6875rem; color: #c6ddcc; }
+.hero-bottom a { display: inline-flex; align-items: center; gap: 1rem; min-height: 28px; color: #e2eee5; }
+
+/* 5. Indicadores: 2 columnas en móvil/tablet; 4 en escritorio */
+.program-stats { background: var(--surface); border-bottom: 1px solid var(--line); }
+.program-stats dl > div { position: relative; display: flex; flex-direction: column; padding: 1.5rem 1rem; }
+.program-stats dl > div:nth-child(odd)::after { content: ""; position: absolute; right: 0; top: 1.5rem; bottom: 1.5rem; width: 1px; background: var(--line); }
+.program-stats dt { order: 2; margin-top: .375rem; font-size: .75rem; font-weight: 550; color: var(--ink); }
+.program-stats dd { order: 1; font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 650; line-height: 1.1; letter-spacing: -.035em; color: var(--forest); }
+.program-stats dd span { display: none; }
+.program-stats .campus-value { font-size: clamp(1.4rem, 2.5vw, 1.875rem); }
+
+/* 6. Contenido y ficha. El orden responsive se resuelve con Bootstrap */
+.academic-layout { padding-block: 3rem 4rem; }
+.program-card { padding: 1.5rem; background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--green); border-radius: 14px; box-shadow: var(--shadow); }
+.program-card h2 { margin-top: .625rem; font-size: 1.375rem; letter-spacing: -.035em; font-weight: 650; }
+.card-intro { margin-top: .5rem; font-size: .8125rem; color: var(--muted); }
+.program-facts { margin-block: 1.5rem; }
+.program-facts > div { padding-block: .75rem; border-bottom: 1px solid var(--line); }
+.program-facts > div:first-child { padding-top: 0; }
+.program-facts dt { font-size: .6875rem; font-weight: 500; color: var(--muted); }
+.program-facts dd { margin-top: .1875rem; font-size: .8125rem; font-weight: 600; }
+.button-primary { color: var(--button-ink); background: var(--green); }
+.button-primary:hover { color: var(--button-ink); background: var(--forest); }
+.button-outline { border-color: var(--line); color: var(--green); background: transparent; }
+.button-outline:hover { border-color: var(--green); background: var(--surface-alt); color: var(--green); }
+.card-contact { display: flex; justify-content: center; align-items: center; gap: .5rem; min-height: 44px; font-size: .75rem; font-weight: 550; }
+.academic-content .section-heading { margin-bottom: 2rem; }
+
+/* 7. Acordeones semánticos. El símbolo +/- es únicamente decorativo */
+.academic-accordion { border-top: 1px solid var(--line); }
+.academic-detail { border-bottom: 1px solid var(--line); scroll-margin-top: 5rem; }
+.academic-detail > summary { display: flex; align-items: center; gap: 1rem; min-height: 76px; padding: 1.25rem 0; }
+.academic-detail > summary .detail-title { flex: 1; font-size: .9375rem; font-weight: 600; }
+.detail-number { color: var(--muted); font-size: .6875rem; font-variant-numeric: tabular-nums; }
+.detail-toggle { position: relative; display: block; flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--surface-alt); }
+.detail-toggle::before, .detail-toggle::after { content: ""; position: absolute; left: 8px; right: 8px; top: 13px; height: 1.5px; background: var(--green); }
+.detail-toggle::after { transform: rotate(90deg); }
+.academic-detail[open] .detail-toggle::after { transform: rotate(0); }
+.academic-detail[open] > summary .detail-title, .academic-detail > summary:hover .detail-title { color: var(--green); }
+.accordion-body { padding: 0 0 1.5rem 2rem; font-size: .875rem; line-height: 1.9; color: var(--muted); }
+.accordion-body p + p, .accordion-body h3:not(:first-child) { margin-top: 1rem; }
+.accordion-body h3 { margin-bottom: .5rem; font-size: .9375rem; font-weight: 650; color: var(--ink); }
+.accordion-body strong { color: var(--ink); font-weight: 600; }
+.accordion-body ul { padding-left: 1.25rem; }
+.accordion-body li + li { margin-top: .75rem; }
+.accordion-body a, .program-regulations a { text-decoration: underline; overflow-wrap: anywhere; }
+.accordion-body a:hover, .program-regulations a:hover { text-decoration-thickness: 2px; }
+.program-regulations { margin-top: 2.5rem; padding: 1.5rem; background: var(--surface-alt); border-radius: 12px; }
+.program-regulations h3 { font-size: .875rem; font-weight: 650; }
+.program-regulations dl { margin-top: 1rem; }
+.program-regulations dl > div + div { margin-top: 1rem; }
+.program-regulations dt { color: var(--ink); font-size: .75rem; font-weight: 600; }
+.program-regulations dd { margin-top: .25rem; color: var(--muted); font-size: .75rem; }
+.program-identity { margin-top: 1.5rem; }
+.program-identity summary { display: flex; justify-content: space-between; align-items: center; min-height: 44px; color: var(--muted); font-size: .8125rem; }
+.program-identity img { width: 100%; height: auto; margin-top: .75rem; border-radius: 8px; }
+.publication-meta { margin-top: 1.5rem; color: var(--muted); font-size: .625rem; }
+
+/* 8. Actualidad. Retícula lista para más noticias, sin inventar contenido */
+.university-news { padding-block: 3rem 4rem; border-block: 1px solid var(--line); background: var(--surface-alt); }
+.news-card { height: 100%; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+.news-art { position: relative; display: flex; align-items: center; aspect-ratio: 16 / 9; overflow: hidden; padding: 1.5rem; background: #075b2a; color: #cbe0c6; }
+.news-art > span { position: relative; z-index: 1; font-size: 3rem; font-weight: 650; letter-spacing: -.065em; }
+.news-art svg { position: absolute; inset: 0; width: 100%; height: 100%; stroke: #b7d52a; stroke-width: 1; opacity: .3; }
+.news-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.news-body { padding: 1.5rem; }
+.news-meta { margin-bottom: 1rem; font-size: .6875rem; color: var(--muted); }
+.news-meta a { font-weight: 650; }
+.news-card h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.5; letter-spacing: -.02em; }
+.news-card p { margin-top: .75rem; font-size: .8125rem; color: var(--muted); }
+.news-card .text-link { margin-top: 1rem; font-size: .75rem; }
+
+/* 9. Directorio institucional: cuatro categorías, sin accesos flotantes */
+.institutional-links { padding-block: 3rem 4rem; }
+.link-column h3 { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; font-size: 1.125rem; font-weight: 650; letter-spacing: -.025em; }
+.link-column h3 > span { color: var(--green); font-size: .625rem; font-weight: 500; }
+.link-column h4 { margin-block: 1.5rem .5rem; font-size: .75rem; font-weight: 700; }
+.link-column ul { padding: 0; list-style: none; }
+.link-column a { display: inline-block; padding-block: .375rem; color: var(--muted); font-size: .75rem; line-height: 1.7; }
+.link-column a:hover { color: var(--green); }
+
+/* 10. Footer: contacto legible y logos secundarios */
+.site-footer { padding-top: 2.5rem; background: #0d2118; color: #eaf2ed; }
+.footer-identity { padding-bottom: 2rem; border-bottom: 1px solid #2b4034; }
+.footer-identity h2 { font-size: clamp(1.125rem, 2vw, 1.5rem); font-weight: 650; letter-spacing: -.025em; }
+.footer-identity p { margin-top: .625rem; font-size: .75rem; color: #b2c3b9; }
+.footer-identity p > span { margin-inline: .5rem; }
+.site-footer a { color: #c6d6cc; }
+.site-footer a:hover { color: #eaf2ed; }
+.site-footer :focus-visible { outline-color: var(--accent); }
+.social-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: .6875rem; }
+.footer-columns { padding-block: 2.5rem; }
+.footer-columns h3 { margin-bottom: 1rem; color: #f2f7f3; font-size: .875rem; font-weight: 650; }
+.footer-columns ul { padding: 0; list-style: none; }
+.footer-columns li a { display: inline-block; padding-block: .375rem; font-size: .75rem; }
+.footer-columns p { margin-bottom: .875rem; font-size: .75rem; color: #b2c3b9; }
+.footer-columns p a { text-decoration: underline; overflow-wrap: anywhere; }
+.location-map { display: block; overflow: hidden; border: 1px solid #2b4034; border-radius: 10px; }
+.location-map img { width: 100%; height: auto; }
+.location-map > span { display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: .625rem .875rem; font-size: .6875rem; }
+.institutional-logos { padding: 1.5rem; border-radius: 10px; background: #fff; }
+.institutional-logos a { display: grid; place-items: center; min-width: 44px; min-height: 44px; }
+.institutional-logos img { max-width: 80px; width: auto; max-height: 40px; height: auto; object-fit: contain; }
+.institutional-logos .wide-logo { max-width: 145px; }
+.footer-legal { margin-top: 2rem; padding-block: 1.5rem; border-top: 1px solid #2b4034; color: #b2c3b9; font-size: .625rem; }
+.footer-legal a { display: inline-flex; align-items: center; gap: .5rem; }
+
+/* 11. Ajustes por pantalla; Bootstrap md=768px y lg=992px */
+@media (min-width: 768px) {
+  .site-container { width: calc(100% - 3rem); }
+  .identity-row { min-height: 88px; }
+  .university-brand img { width: 265px; }
+  .search-form { width: clamp(220px, 25vw, 320px); }
+  .hero-layout { padding-block: 3rem; }
+  .hero-description { margin-top: 1.5rem; }
+  .program-stats dl > div { padding: 1.75rem 1.5rem; }
+  .academic-layout { padding-block: 4rem 5rem; }
+  .program-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
+  .program-facts > div:first-child { padding-top: .75rem; }
+  .university-news, .institutional-links { padding-block: 4rem; }
+}
+
+@media (min-width: 992px) {
+  .site-container { width: calc(100% - 4rem); }
+  .university-brand img { width: 290px; }
+  .hero-layout { padding-block: 3rem 3.5rem; }
+  .hero-bottom { padding-block: .75rem; }
+  .program-stats dl > div { padding: 2rem; }
+  .program-stats dl > div:not(:last-child)::after { content: ""; position: absolute; right: 0; top: 2rem; bottom: 2rem; width: 1px; background: var(--line); }
+  .program-card { position: sticky; top: 5rem; padding: 1.5rem; }
+  .program-facts { display: block; }
+  .program-facts > div:first-child { padding-top: 0; }
+  .program-stats dd { color: var(--forest); }
+}
+
+@media (max-width: 374px) {
+  .language-label span { display: none; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero-actions .button { width: 100%; }
+}
+
+/* 12. Tema automático. Superficies y contraste, no inversión de colores */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0b1210;
+    --surface: #131c18;
+    --surface-alt: #19251e;
+    --ink: #f2f7f3;
+    --muted: #aab7ae;
+    --line: #26352c;
+    --green: #22a447;
+    --forest: #64bc7b;
+    --button-ink: #0b1210;
+    --shadow: none;
+  }
+  .university-brand { padding: .25rem; background: #fff; border-radius: 5px; }
+  .institutional-bar { background: #072b18; }
+  .hero { background: linear-gradient(115deg, #082f21 0%, #08482a 60%, #0b5726 100%); }
+  .theme-light { display: none; }
+  .theme-dark { display: inline; }
+  .button-primary:hover { background: #64bc7b; }
+  .program-stats dd { color: #64bc7b; }
+  .site-footer { background: #09150e; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+  .button:hover { transform: none; }
+}
+
+@media print {
+  .institutional-bar, .header-tools, .primary-nav, .hero-art, .hero-actions,
+  .card-actions, .university-news, .institutional-links, .social-links,
+  .institutional-logos, .footer-legal > a, .skip-link { display: none !important; }
+  body, .hero, .program-card, .site-footer { color: #17201b; background: #fff; }
+  .hero h1 > span, .hero .eyebrow, .hero-description { color: #17201b; }
+  .program-card { position: static; box-shadow: none; }
+  .academic-layout { padding-block: 2rem; }
+  .academic-detail { break-inside: avoid; }
+  a { color: #075b2a; }
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Ingeniería de Sistemas de la Universidad de la Amazonia. Información académica, plan de estudios, requisitos y contacto del programa presencial en Florencia, Caquetá.">
+  <title>Ingeniería de Sistemas - Universidad de la Amazonia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- Identidad y herramientas institucionales. Todos los controles son nativos. -->
+  <header class="site-header" id="inicio">
+    <div class="institutional-bar">
+      <div class="site-container d-flex align-items-center justify-content-between gap-4">
+        <a class="gov-link" href="https://www.gov.co/" aria-label="Portal del Estado colombiano, GOV.CO">GOV.CO <span aria-hidden="true">↗</span></a>
+        <div class="d-flex align-items-center gap-4 gap-md-4">
+          <span lang="es" class="language-label">ES <span>Español</span></span>
+          <details class="accessibility-menu header-dropdown">
+            <summary>Accesibilidad <span aria-hidden="true">⌄</span></summary>
+            <div class="dropdown-panel">
+              <h2>Opciones de lectura</h2>
+              <fieldset>
+                <legend>Tamaño del texto</legend>
+                <label><input type="radio" name="text-size" id="text-normal" checked> Estándar</label>
+                <label><input type="radio" name="text-size" id="text-large"> Grande</label>
+              </fieldset>
+              <a href="#contenido">Saltar al contenido principal</a>
+              <p>Usa Tab para navegar y Enter o Espacio para abrir los menús. El tema se adapta a tu sistema.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+    <div class="site-container identity-row d-flex align-items-center justify-content-between gap-4 gap-md-4">
+      <a class="university-brand" href="https://www.uniamazonia.edu.co/Inicio/">
+        <img src="img/uniamazonia.jpg" alt="Universidad de la Amazonia" width="290" height="80" fetchpriority="high">
+      </a>
+      <div class="header-tools d-flex align-items-center gap-3 gap-md-4">
+        <div class="d-none d-md-block"><form class="search-form" action="https://www.uniamazonia.edu.co/inicio/index.php/es/" method="get" role="search" aria-label="Buscar en la Universidad">
+            <label class="visually-hidden" for="busqueda-desktop">Buscar en el sitio de la Universidad</label>
+            <input type="search" id="busqueda-desktop" name="searchword" placeholder="¿Qué estás buscando?" maxlength="200" required>
+            <input type="hidden" name="option" value="com_search"><input type="hidden" name="task" value="search">
+            <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></button>
+          </form></div>
+        <details class="mobile-search header-dropdown d-md-none">
+          <summary aria-label="Abrir buscador"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></summary>
+          <div class="dropdown-panel"><form class="search-form" action="https://www.uniamazonia.edu.co/inicio/index.php/es/" method="get" role="search" aria-label="Buscar en la Universidad">
+            <label class="visually-hidden" for="busqueda-mobile">Buscar en el sitio de la Universidad</label>
+            <input type="search" id="busqueda-mobile" name="searchword" placeholder="¿Qué estás buscando?" maxlength="200" required>
+            <input type="hidden" name="option" value="com_search"><input type="hidden" name="task" value="search">
+            <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></button>
+          </form></div>
+        </details>
+        <details class="quick-access header-dropdown">
+          <summary><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/></svg><span class="d-none d-lg-inline">Accesos rápidos</span><span class="d-none d-lg-inline" aria-hidden="true">⌄</span><span class="visually-hidden d-lg-none">Accesos rápidos</span></summary>
+          <div class="dropdown-panel"><h2>Accesos rápidos</h2><ul><li><a href="https://chaira.uniamazonia.edu.co/Chaira/Logon.aspx">Ingreso a Chairá</a></li>
+              <li><a href="https://outlook.com/udla.edu.co">Ingreso al correo</a></li>
+              <li><a href="https://aulaextendida.uniamazonia.edu.co/aulaextendida/">Aula Extendida</a></li>
+              <li><a href="https://portalvidi.uniamazonia.edu.co/">Portal ViDi</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/atencion-al-ciudadano.html">Atención al ciudadano</a></li>
+              <li><a href="https://drive.google.com/drive/folders/1YNysDUoRnLb46wUsdFO0nVXcO8dnjAIM">SIGC</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/Inicio/index.php/convocatorias/invitaciones-a-contratar.html">Invitaciones</a></li>
+              <li><a href="https://chaira.uniamazonia.edu.co/oari/Vistas/Publico/Principal.aspx#">Convenios OIRI</a></li>
+              <li><a href="https://uniamazonia.integrasoftsas.co:8085/">BPM.Gov</a></li>
+              <li><a href="https://www.colombiacompra.gov.co/secop-ii">SECOP II</a></li></ul></div>
+        </details>
+        <span class="theme-indicator d-none d-lg-flex" title="El tema sigue la preferencia del sistema"><span aria-hidden="true">◐</span><span class="theme-light">Claro · automático</span><span class="theme-dark">Oscuro · automático</span></span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="primary-nav" aria-label="Navegación principal">
+    <div class="site-container">
+      <ul class="desktop-navigation d-none d-lg-flex align-items-center gap-4"><li><a href="https://www.uniamazonia.edu.co/Inicio/">Inicio</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/presentacion/mision-y-vision.html">Universidad</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado.html" class="nav-active">Programas</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/vicerrectorias/vicerrectoria-de-investigaciones-e-innovacion.html">Investigación</a></li>
+              <li><a href="#enlaces-servicios">Servicios</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/presentacion/datos-de-contacto-sedes.html">Sedes</a></li></ul>
+      <details class="mobile-navigation d-lg-none">
+        <summary><span class="d-flex align-items-center gap-3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Menú de la Universidad</span><span aria-hidden="true">⌄</span></summary>
+        <ul><li><a href="https://www.uniamazonia.edu.co/Inicio/">Inicio</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/presentacion/mision-y-vision.html">Universidad</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado.html" class="nav-active">Programas</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/vicerrectorias/vicerrectoria-de-investigaciones-e-innovacion.html">Investigación</a></li>
+              <li><a href="#enlaces-servicios">Servicios</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/presentacion/datos-de-contacto-sedes.html">Sedes</a></li></ul>
+      </details>
+    </div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <!-- Un solo h1 y una ruta independiente de la navegación global. -->
+    <section class="hero" aria-labelledby="program-title">
+      <div class="site-container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <ol class="d-flex flex-wrap align-items-center gap-2"> <li><a href="https://www.uniamazonia.edu.co/Inicio/">Inicio</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado.html">Programas</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado.html">Pregrado</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado/ingenieria.html">Ingeniería</a></li><li aria-current="page">Ingeniería de Sistemas</li></ol>
+        </nav>
+        <div class="hero-layout row gy-4 align-items-center">
+          <div class="hero-copy col-lg-8">
+            <p class="eyebrow"><span aria-hidden="true"></span> Facultad de Ingeniería</p>
+            <h1 id="program-title">Ingeniería de <span>Sistemas</span></h1>
+            <p class="hero-description">Tecnología, innovación y conocimiento para transformar el territorio.</p>
+            <ul class="program-badges d-flex flex-wrap gap-2" aria-label="Características del programa">
+              <li><span aria-hidden="true">◉</span> Presencial</li>
+              <li><span aria-hidden="true">◷</span> Diurna</li>
+              <li><span aria-hidden="true">▤</span> 10 semestres</li>
+            </ul>
+            <div class="hero-actions d-flex flex-wrap gap-3">
+              <a class="button button-lime" href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2020/Acuerdo%2044%20Plan%20de%20Estudios%20de%20Ingenieria%20de%20Sistemas.pdf">Ver plan de estudios <span aria-hidden="true">↗</span></a>
+              <a class="button button-hero" href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/228-aspirantes.html">Información de admisión <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="hero-art d-none d-lg-block col-lg-4" aria-hidden="true">
+            <svg viewBox="0 0 360 340" fill="none">
+              <g class="contours">
+                <path d="M56 280C-5 152 72 20 195 32s166 126 102 211S136 348 56 280Z"/><path d="M72 264C19 153 82 44 189 53s141 105 90 179-137 83-207 32Z"/><path d="M89 250C43 153 92 65 184 74s116 86 78 150-113 70-173 26Z"/><path d="M106 235C70 154 103 90 180 96s91 66 65 119-91 56-139 20Z"/><path d="M124 220c-28-63-6-108 51-102s71 47 54 88-69 44-105 14Z"/><path d="M142 206c-18-45-5-71 32-66s43 28 32 57-42 29-64 9Z"/>
+              </g>
+              <g class="circuit-lines"><path d="M15 89h65l42 42h61M183 170h65l50-50h50M35 300l55-55h88l34-34M173 32v50l39 39v32"/><circle cx="183" cy="131" r="5"/><circle cx="183" cy="170" r="5"/><circle cx="212" cy="211" r="5"/><circle cx="212" cy="153" r="5"/><circle cx="15" cy="89" r="3"/><circle cx="348" cy="120" r="3"/><circle cx="35" cy="300" r="3"/></g>
+            </svg>
+            <p>AMAZONÍA <span>+</span> TECNOLOGÍA</p>
+          </div>
+        </div>
+        <div class="hero-bottom d-flex flex-wrap align-items-center justify-content-between gap-4"><span>Universidad de la Amazonia</span><a href="#informacion">Explora el programa <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="program-stats" aria-label="El programa en cifras">
+      <div class="site-container"><dl class="row g-0">
+        <div class="col-6 col-lg-3"><dt>Semestres</dt><dd>10<span>Duración del programa</span></dd></div>
+        <div class="col-6 col-lg-3"><dt>Créditos académicos</dt><dd>178<span>Plan de formación</span></dd></div>
+        <div class="col-6 col-lg-3"><dt>Código SNIES</dt><dd>52384<span>Registro del programa</span></dd></div>
+        <div class="col-6 col-lg-3"><dt>Campus</dt><dd class="campus-value">Florencia<span>Caquetá, Colombia</span></dd></div>
+      </dl></div>
+    </section>
+
+    <div class="site-container">
+      <div class="academic-layout row gy-5 gx-lg-5" id="informacion">
+      <!-- En móvil, la ficha precede al contenido. En escritorio ocupa 4 de 12 columnas. -->
+      <aside class="program-sidebar col-lg-4 order-lg-2" aria-labelledby="program-card-title">
+        <section class="program-card">
+          <p class="eyebrow">Tu próximo paso</p>
+          <h2 id="program-card-title">Ficha del programa</h2>
+          <p class="card-intro">Ingeniería de Sistemas</p>
+          <dl class="program-facts">
+            <div><dt>Título que Otorga</dt><dd>Ingeniero de Sistemas</dd></div>
+            <div><dt>Modalidad</dt><dd>Presencial</dd></div>
+            <div><dt>Jornada</dt><dd>Diurna</dd></div>
+            <div><dt>Duración del programa</dt><dd>10 semestres</dd></div>
+            <div><dt>Número de Créditos Académicos</dt><dd>178</dd></div>
+            <div><dt>Código SNIES</dt><dd>52384</dd></div>
+            <div><dt>Lugar de desarrollo</dt><dd>Florencia - Caquetá, Campus Florencia.</dd></div>
+          </dl>
+          <div class="card-actions d-grid gap-3">
+            <a class="button button-primary" href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html">Inscripciones <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2020/Acuerdo%2044%20Plan%20de%20Estudios%20de%20Ingenieria%20de%20Sistemas.pdf">Plan de estudios <span aria-hidden="true">↗</span></a>
+            <a class="card-contact" href="mailto:pisistemas@uniamazonia.edu.co">Contacto con el programa <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+      </aside>
+
+      <article class="academic-content col-lg-8 order-lg-1" aria-labelledby="academic-title">
+        <header class="section-heading">
+          <p class="eyebrow">Conoce el programa</p>
+          <h2 id="academic-title">Conocimiento que conecta.</h2>
+          <p>Información académica de Ingeniería de Sistemas.</p>
+        </header>
+        <section class="academic-accordion" aria-label="Información académica del programa">
+          <details class="academic-detail" id="proposito" open>
+              <summary><span class="detail-number" aria-hidden="true">01</span><span class="detail-title">Propósito de formación del programa</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><p> El Programa Ingeniería de Sistemas de la Universidad de la Amazonia tiene como principal propósito desarrollar procesos de formación integral de profesionales de Ingeniería de Sistemas. </p></div>
+            </details>
+            <details class="academic-detail" id="mision-vision">
+              <summary><span class="detail-number" aria-hidden="true">02</span><span class="detail-title">Misión y Visión</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><h3>Misión</h3><p> El programa académico Ingeniería de Sistemas de la Universidad de la Amazonia asume como encargo social la formación de profesionales íntegros. </p><h3>Visión</h3><p> Ingeniería de Sistemas será un programa académico en permanente acreditación académica y social. </p></div>
+            </details>
+            <details class="academic-detail" id="perfil">
+              <summary><span class="detail-number" aria-hidden="true">03</span><span class="detail-title">Perfil de egreso</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><p> El Ingeniero de Sistemas de la Universidad de la Amazonia es un profesional que comprende las dinámicas del entorno. </p></div>
+            </details>
+            <details class="academic-detail" id="plan-estudios">
+              <summary><span class="detail-number" aria-hidden="true">04</span><span class="detail-title">Plan de estudios</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><a href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2020/Acuerdo%2044%20Plan%20de%20Estudios%20de%20Ingenieria%20de%20Sistemas.pdf">Acuerdo 44 del 02 de diciembre de 2020</a></div>
+            </details>
+            <details class="academic-detail" id="requisitos">
+              <summary><span class="detail-number" aria-hidden="true">05</span><span class="detail-title">Requisitos</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/228-aspirantes.html">Ver requisitos Clic aquí</a></div>
+            </details>
+            <details class="academic-detail" id="inversion">
+              <summary><span class="detail-number" aria-hidden="true">06</span><span class="detail-title">Inversión</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><ul><li><strong>Valor Inscripción:</strong> 8.0% del S.M.M.L.V. </li>
+              <li><strong> Valor derecho de matrícula: </strong> Consultar acuerdo. </li></ul></div>
+            </details>
+            <details class="academic-detail" id="documentos">
+              <summary><span class="detail-number" aria-hidden="true">07</span><span class="detail-title">Documentos de Interés</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><ul><li><a href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2002/Acuerdo%2019%20-%20Por%20el%20cual%20se%20adopta%20la%20linea%20de%20investigacion%20Sistemas%20de%20Formacion%20Geografica%20para%20la%20facultad%20de%20ingenieria.pdf">Línea de Investigación Sistemas de Información Geográfica</a></li>
+              <li><a href="https://drive.google.com/drive/folders/1OjF8Tb43WolUrTwbHwLWE9UDTKP45xVQ?usp=drive_link">Contenidos programáticos pensum 2020</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Programas%20Academicos/Ingenieria%20de%20Sistemas/Formatos%20de%20Opcion%20de%20grado/Opciones%20de%20grado.pdf">Opciones de Grado</a></li>
+              <li><a href="https://drive.google.com/drive/folders/14EBlcWxRo1mfWvUKeTcIXoWUWORG0KUJ?usp=sharing">Formatos de Opción de Grado</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Sistema%20Integrado%20de%20Gestion%20de%20Calidad/6.%20Procesos/2.%20Misional/Docencia/Procedimientos/7.%20Aprobacion%20de%20opcion%20de%20grado/FO-M-DC-07-03.pdf">Formato Notificación Opción de Grado</a></li>
+              <li><a href="https://drive.google.com/drive/folders/1IuMu73ZW26iHtAeWZHUp9UXN2dHLfxus?usp=sharing">Protocolo de Sustentación y Socialización</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Programas%20Academicos/Ingenieria%20de%20Sistemas/BROCHURE%20INGENIERIA%20DE%20SISTEMAS.pdf">Brochure Ingeniería de Sistemas</a></li></ul></div>
+            </details>
+            <details class="academic-detail" id="contacto">
+              <summary><span class="detail-number" aria-hidden="true">08</span><span class="detail-title">Contacto</span><span class="detail-toggle" aria-hidden="true"></span></summary>
+              <div class="accordion-body"><p><strong>Coordinadora de Programa:</strong> Paula Andrea Chica Murcia. </p><p><strong>Teléfono:</strong> <a href="tel:+573204541936">320 454 1936</a>. </p><p><strong>Correo electrónico:</strong><a href="mailto:pisistemas@uniamazonia.edu.co"> pisistemas@uniamazonia.edu.co </a></p><p><strong>Ubicación:</strong> Florencia - Caquetá, Campus Florencia, barrio El Porvenir, bloque administrativo, primer piso. </p></div>
+            </details>
+        </section>
+        <section class="program-regulations" aria-labelledby="regulations-title">
+          <h3 id="regulations-title">Información legal y calidad académica</h3>
+          <dl>
+            <div><dt>Acuerdo de creación</dt><dd><a href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Superior/Acuerdos/2004/Acuerdo%20016%20-%20Por%20el%20cual%20se%20autoriza%20la%20creacion%20del%20programa%20academico%20de%20Ingenieria%20de%20Sistemas.pdf">Acuerdo 16 del 26 de agosto de 2004</a></dd></div>
+            <div><dt>Resolución Registro Calificado</dt><dd><a href="https://www.uniamazonia.edu.co/documentos/docs/Programas%20Academicos/Ingenieria%20de%20Sistemas/Resolucion%201562%20-%20Registro%20Calificado.pdf">001562 del 16 de febrero de 2022</a></dd></div>
+            <div><dt>Informe de Autoevaluación</dt><dd>Ver informe.</dd></div>
+            <div><dt>Informe de verificación del cumplimiento de condiciones de calidad</dt><dd>Ver informe.</dd></div>
+          </dl>
+        </section>
+        <details class="program-identity">
+          <summary>Identidad del programa <span aria-hidden="true">⌄</span></summary>
+          <img src="img/ingenieria-sistemas.jpg" alt="Programa Ingeniería de Sistemas" width="1200" height="400" loading="lazy">
+        </details>
+        <div class="publication-meta d-flex flex-wrap column-gap-4 row-gap-2"><p>Publicado el <time datetime="2013-08-21">21 Agosto 2013</time></p><p>Visitas: 110189</p><p>Última Actualización: <time datetime="2026-10-04T11:32:34-05:00">04-10-2026 11:32:34</time></p></div>
+      </article>
+    </div>
+
+    </div>
+    <!-- Solo existe una noticia en el original: no se fabrican otras tarjetas. -->
+    <section class="university-news" aria-labelledby="news-title">
+      <div class="site-container">
+        <header class="section-heading d-flex flex-wrap justify-content-between align-items-end gap-4">
+          <div><p class="eyebrow">La Universidad, hoy</p><h2 id="news-title">Actualidad de la Universidad</h2><p>Últimas Noticias</p></div>
+          <a class="text-link" href="https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/noticias-y-eventos.html">Todas las noticias <span aria-hidden="true">↗</span></a>
+        </header>
+        <div class="news-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><article class="news-card">
+            <div class="news-art" aria-hidden="true"><span>UA</span><svg viewBox="0 0 320 180" fill="none"><path d="M0 130h90l50-50h80l50-50h50M0 155h105l50-50h80l50-50h35M0 180h120l50-50h80l50-50h20"/></svg></div>
+            <div class="news-body">
+              <div class="news-meta d-flex flex-wrap align-items-center gap-3"><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/noticias-y-eventos/117-academia.html">Academia</a><time datetime="2026-09-30">30-09-2026</time></div>
+              <h3>¡Atención estudiantes del Programa de Mercadeo!</h3>
+              <p>La Universidad de la Amazonia...</p>
+              <a class="text-link" href="https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/noticias-y-eventos/117-academia.html">Consultar noticias de Academia <span aria-hidden="true">↗</span></a>
+            </div>
+          </article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="institutional-links" aria-labelledby="institutional-title">
+      <div class="site-container">
+        <header class="section-heading"><p class="eyebrow">Siempre a tu alcance</p><h2 id="institutional-title">Conecta con la Universidad</h2></header>
+        <div class="links-grid row gy-5 gx-lg-5">
+          <section class="link-column col-md-6 col-lg-3" aria-labelledby="academic-links-title"><h3 id="academic-links-title"><span aria-hidden="true">01</span> Académico</h3><h4>Programas</h4>
+            <ul><li><a href="https://www.uniamazonia.edu.co/inicio/index.php/programas/pregrado.html">Pregrados</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/programas/posgrado.html">Posgrados</a></li>
+              <li><a href="https://chaira.uniamazonia.edu.co/AcademicoV3/Vistas/Publico/Evento/Evento.aspx">Educación Continuada</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/233-calendario-academico/35-cuales-son-las-fechas-academicas-mas-importantes-de-cada-semestre.html">Calendario Académico</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico.html">Admisiones y Registro</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/Inicio/index.php/la-universidad/normativa/valores-de-matriculas-y-derechos-pecuniarios-y-complementarios.html">Tarifas / Derechos Pecuniarios</a></li></ul>
+            <h4>Investigación y publicaciones</h4>
+            <ul><li><a href="https://www.uniamazonia.edu.co/comisionverdad/">Repositorio de la Verdad</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/investigacion/editorial/publica-con-nosotros.html">Publica con Nosotros</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Oficina%20de%20Informacion%20y%20Comunicacion/periodico/Periodico%20Institucional%20Diciembre%20de%202025.pdf">Periódico Virtual</a></li>
+              <li><a href="https://editorial.uniamazonia.edu.co/">Nuestras Revistas</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Oficina%20Asesora%20de%20Planeacion/Plan%20de%20Desarrollo%20Institucional/PDI%202020%20-2029.pdf">Plan de Desarrollo</a></li>
+              <li><a href="https://bit.ly/instruc_poa">Instructivo POA</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/gestion-institucional/control-y-rendicion-de-cuentas/informe-de-rendicion-de-cuentas.html">Rendición de Cuentas</a></li></ul></section>
+          <section class="link-column col-md-6 col-lg-3" aria-labelledby="services-links-title" id="enlaces-servicios"><h3 id="services-links-title"><span aria-hidden="true">02</span> Servicios</h3><h4>Aplicaciones Web</h4>
+            <ul><li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html">Inscripciones (Pregrado y Posgrado)</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/noticias-y-eventos/117-academia/7154-liquidacion.html">Liquidación</a></li>
+              <li><a href="https://uniamazonia.janium.net/janium-bin/busqueda_rapida.pl?Id=20250916142206">Catálogo en Línea (OPAC)</a></li>
+              <li><a href="https://chaira.uniamazonia.edu.co/sigepi/Default.aspx">SIGEPI</a></li></ul>
+            <h4>Servicios</h4>
+            <ul><li><a href="https://uniamazonia.gestionjuridica.com/au/cjv">Consultorio Jurídico y Centro de Conciliación Virtual</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-biblioteca-e-informacion-cientifica/190-direccion-biblioteca-e-informacion-cientifica.html">Biblioteca</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/investigacion/editorial.html">Editorial Uniamazonia</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/investigacion/unidades-de-apoyo-a-la-investigacion/69-consultorio-contable-tributario.html">Consultorio Contable Tributario</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/presentacion-sobre-el-naf.html">Núcleos de Apoyo Contable y Fiscal</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/vicerrectorias/vicerrectoria-de-investigaciones-e-innovacion/87-u-de-apoyo/consultorio-juridico.html">Consultorio Jurídico</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/vicerrectorias/vicerrectoria-de-investigaciones-e-innovacion/86-u-de-apoyo/centro-de-conciliacion/171-centro-de-conciliacion.html">Centro de Conciliación</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/otras-dependencias/centro-de-idiomas.html">Centro de Idiomas</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/otras-dependencias/unidad-de-emprendimiento.html">Unidad de Emprendimiento</a></li>
+              <li><a href="https://chaira.uniamazonia.edu.co/GestionProveedores/Vistas/Privado/Inicio.aspx">Proveedores</a></li></ul></section>
+          <section class="link-column col-md-6 col-lg-3" aria-labelledby="institution-links-title"><h3 id="institution-links-title"><span aria-hidden="true">03</span> Institucional</h3><h4>Información institucional</h4>
+            <ul><li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/2016-01-13-21-40-16.html">Estatuto General</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/2016-01-13-21-34-14.html">Estatuto Docente</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/2013-11-01-16-33-57.html">Estatuto Estudiantil</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/Inicio/index.php/gestion-institucional/contratacion/estatuto-de-contratacion.html">Estatuto de Contratación</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/estatuto-de-biblioteca.html">Estatuto de Biblioteca</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/estatuto-del-investigador.html">Estatuto del Investigador</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/estatuto-electoral.html">Estatuto Electoral</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/estatuto-presupuestal.html">Estatuto Presupuestal</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/estatutos/estatuto-de-posgrados.html">Estatuto de Posgrados</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Superior/Acuerdos/2023/Acuerdo%20085%20-%20Actualizacion%20Politica%20Modelo%20de%20Bienestar%20Universitario.pdf">Políticas de Bienestar Universitario</a></li></ul>
+            <h4>Descubre la Universidad</h4>
+            <ul><li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/normativa/marco-juridico.html">Marco Jurídico</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/gestion-institucional/control-y-rendicion-de-cuentas/informe-de-rendicion-de-cuentas.html">Rendición de Cuentas</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Oficina%20Asesora%20de%20Planeacion/Plan%20de%20Desarrollo%20Institucional/PDI%202020%20-2029.pdf">Plan de Desarrollo PDI</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/la-universidad/transparencia.html">Transparencia</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/participa.html">Participa</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/2023-06-13-15-58-39/grupos-de-interes/portal-para-ninos.html">Portal para niños</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/convocatorias/ofertas-de-empleo.html">Ofertas de Empleo</a></li></ul>
+            <h4>Dónde estamos</h4><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/presentacion/datos-de-contacto-sedes.html">Programas en otras ciudades</a><h4>Gestión y convocatorias</h4>
+            <ul><li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/gestion-institucional/control-y-rendicion-de-cuentas/informes-de-gestion.html">Gestión</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/investigacion/convocatorias.html">Convocatorias</a></li></ul></section>
+          <section class="link-column col-md-6 col-lg-3" aria-labelledby="citizens-links-title"><h3 id="citizens-links-title"><span aria-hidden="true">04</span> Ciudadanía</h3><h4>Atención al ciudadano</h4>
+            <ul><li><a href="https://chaira.uniamazonia.edu.co/PQRSD/View/Public/PQRS/MenuPublicoPQRSD.aspx">PQRS-D</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/atencion-al-ciudadano/glosario.html">Glosario</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/Inicio/index.php/servicios-de-informacion/preguntas-y-respuestas-frecuentes/relacionadas-con-campus-n-g.html">Preguntas Frecuentes</a></li>
+              <li><a href="https://www.funcionpublica.gov.co/dafpIndexerBT/tramite/index?find=FindNext&amp;query=tramites+universidad+de+la+amazonia&amp;filtroEntidad=0370&amp;filtroSector=&amp;filtroDepartamento=&amp;filtroMunicipio=18001&amp;bloquearFiltroEntidad=&amp;bloquearFiltroSector=&amp;bloquearFiltroDepartamento=&amp;bloquearFiltroMunicipio=">Trámites Uniamazonia</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/politica-de-privacidad.html">Política de Privacidad</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/politica-editorial.html">Política Editorial</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/Inicio/index.php/la-universidad/mapa-de-sitio.html">Mapa del Sitio</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/notificaciones-por-aviso.html">Notificaciones por Aviso</a></li></ul></section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-identity d-flex flex-wrap align-items-center justify-content-between gap-4">
+        <div><h2>Universidad de la Amazonia</h2><p>NIT: 891190346-1 <span aria-hidden="true">·</span> Florencia, Caquetá</p></div>
+        <nav class="social-links d-flex flex-wrap gap-3" aria-label="Redes sociales"><a href="https://www.facebook.com/uniamazonia.edu.co">Facebook</a><a href="https://www.instagram.com/uniamazonia/">Instagram</a><a href="https://x.com/uniamazonia">X</a><a href="https://www.youtube.com/c/uamazonia">YouTube</a><a href="https://www.tiktok.com/@uniamazonia">TikTok</a></nav>
+      </div>
+      <div class="footer-columns row g-4">
+        <section class="col-md-6 col-lg-4"><h3> Enlaces de interés </h3><ul><li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/gestion-institucional/plan-de-desarrollo-institucional.html">Plan de Desarrollo Institucional</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/es/2013-08-14-20-35-02.html">Ofertas de Salas y Vehículos</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/inicio/index.php/politica-de-privacidad.html">Política de Privacidad</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Superior/Acuerdos/2023/Acuerdo%20001%20-%20Por%20el%20cual%20se%20modifica%20de%20forma%20parcial%20el%20Estatuto%20de%20Propiedad%20Intelectual%20de%20la%20Universidad%20de%20la%20Amazonia.pdf">Política de Derechos de Autor</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/documentos/docs/Departamento%20de%20Tecnologias%20de%20la%20Informacion/Guias%20para%20los%20usuarios/Terminos%20y%20condiciones%20del%20sitio%20web%202025.pdf">Términos y condiciones</a></li>
+              <li><a href="https://www.uniamazonia.edu.co/Inicio/index.php/la-universidad/mapa-de-sitio.html">Mapa del sitio</a></li></ul></section>
+        <section class="col-md-6 col-lg-4"><h3> Contáctanos </h3><p> Sede Porvenir Calle 17 Diagonal 17 con Carrera 3F - Barrio Porvenir </p><p> Florencia, Caquetá, Colombia, Suramérica </p><p> Atención Público: Lunes a Viernes de 7:30 a.m. a 11:30 m. y 1:30 p.m. a 5:30 p.m. </p><p> Contacto: <a href="mailto:atencionalciudadano@uniamazonia.edu.co"> atencionalciudadano@uniamazonia.edu.co </a></p><p> PQRS-D: <a href="mailto:quejasyreclamos@uniamazonia.edu.co"> quejasyreclamos@uniamazonia.edu.co </a></p><p> Notificaciones judiciales: <a href="mailto:njudiciales@uniamazonia.edu.co"> njudiciales@uniamazonia.edu.co </a></p></section>
+        <section class="col-md-6 col-lg-4">
+          <h3>Localización física</h3>
+          <a class="location-map" href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/presentacion/localizacion-fisica.html">
+            <img src="img/mapa.jpg" alt="Localización Universidad de la Amazonia" width="700" height="350" loading="lazy">
+            <span>Ver localización física <span aria-hidden="true">↗</span></span>
+          </a>
+        </section>
+      </div>
+      <div class="institutional-logos d-flex flex-wrap align-items-center justify-content-center gap-4 gap-md-4" aria-label="Entidades institucionales">
+        <a href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/direccion/oficinas/oficina-planeacion.html"><img src="img/iso.png" alt="ISO" width="50" height="44" loading="lazy"></a>
+        <a href="https://www.contraloria.gov.co/"><img src="img/contraloria.png" alt="Contraloría" width="42" height="44" loading="lazy"></a>
+        <a href="https://portal.icetex.gov.co/Portal/"><img src="img/icetex.png" alt="ICETEX" width="62" height="44" loading="lazy"></a>
+        <a href="https://www.icfes.gov.co/"><img src="img/icfes.png" alt="ICFES" width="42" height="44" loading="lazy"></a>
+        <a href="https://minciencias.gov.co/"><img class="wide-logo" src="img/minciencias.jpg" alt="Minciencias" width="160" height="28" loading="lazy"></a>
+        <a href="https://www.gov.co/"><img src="img/govco.png" alt="GOV.CO" width="80" height="44" loading="lazy"></a>
+        <a href="https://www.mineducacion.gov.co/portal/"><img class="wide-logo" src="img/mineducacion.png" alt="Ministerio de Educación" width="160" height="28" loading="lazy"></a>
+      </div>
+      <div class="footer-legal d-flex flex-wrap justify-content-between gap-4"><p>Copyright © Universidad de la Amazonia - Todos los derechos reservados.</p><p>Vigilada <a href="https://www.mineducacion.gov.co/portal/">Ministerio de Educación</a></p><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></div>
+    </div>
+  </footer>
+</body>
+</html>
